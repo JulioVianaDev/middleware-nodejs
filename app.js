@@ -4,6 +4,11 @@ const express = require('express');
 
 const app = express();
 
+app.use('/',(req, res, next) => {
+    console.log('isso sempre roda');
+    next()
+});
+
 app.use('/add-product',(req, res, next) => {
     console.log('In another middleware!');
     res.send('<h1>The add page!</h1>');
