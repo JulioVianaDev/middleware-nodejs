@@ -10,7 +10,7 @@ app.use('/',(req, res, next) => {
     next()
 });
 
-app.use('/add-product',(req, res, next) => {
+app.post('/add-product',(req, res, next) => {
     console.log('In another middleware!');
     res.send('<form action="/product" method="POST"><input type="text" name="title"/> <button type="submit">Enviar</button></form>');
 });
